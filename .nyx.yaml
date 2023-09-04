@@ -99,3 +99,4 @@ services:
       REPOSITORY_NAME: "kai-kli"
       REPOSITORY_OWNER: "konstellation-io"
 resume: false
+summary: true
