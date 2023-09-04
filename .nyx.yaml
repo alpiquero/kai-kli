@@ -11,6 +11,7 @@ git:
       password: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
 releaseLenient: true
 releasePrefix: "v"
+initialVersion: "v2.3.0"
 releaseTypes: 
   enabled: 
     - mainline
