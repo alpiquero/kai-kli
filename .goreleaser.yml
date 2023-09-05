@@ -66,35 +66,35 @@ nfpms:
       - deb
       - rpm
 
-#https://goreleaser.com/customization/homebrew/
-brews:
-  - name: kli
-    tap:
-      owner: konstellation-io
-      name: homebrew-tap
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    homepage:  https://github.com/konstellation-io/kai-kli
-    description: A CLI to access, query and manage KAI servers.
-    commit_author:
-      name: goreleaserbot
-      email: releases@konstellation.io
+# #https://goreleaser.com/customization/homebrew/
+# brews:
+#   - name: kli
+#     tap:
+#       owner: konstellation-io
+#       name: homebrew-tap
+#       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+#     homepage:  https://github.com/konstellation-io/kai-kli
+#     description: A CLI to access, query and manage KAI servers.
+#     commit_author:
+#       name: goreleaserbot
+#       email: releases@konstellation.io
 
-scoops:
-  - name: kli
-    commit_author:
-      name: goreleaserbot
-      email: releases@konstellation.io
-    commit_msg_template: "Scoop update for {{ .ProjectName }} version {{ .Version }}"
-    homepage: https://konstellation.io
-    description: A CLI to access, query and manage KAI servers.
-    license: MIT
-    repository:
-      owner: konstellation-io
-      name: scoop-bucket
-      branch: main
-      token: "{{ .Env.SCOOP_BUCKET_GITHUB_TOKEN }}"
-      pull_request:
-        enabled: false
+# scoops:
+#   - name: kli
+#     commit_author:
+#       name: goreleaserbot
+#       email: releases@konstellation.io
+#     commit_msg_template: "Scoop update for {{ .ProjectName }} version {{ .Version }}"
+#     homepage: https://konstellation.io
+#     description: A CLI to access, query and manage KAI servers.
+#     license: MIT
+#     repository:
+#       owner: konstellation-io
+#       name: scoop-bucket
+#       branch: main
+#       token: "{{ .Env.SCOOP_BUCKET_GITHUB_TOKEN }}"
+#       pull_request:
+#         enabled: false
 
 # https://goreleaser.com/customization/checksum/
 checksum:
