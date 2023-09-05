@@ -102,13 +102,4 @@ checksum:
 
 # https://goreleaser.com/customization/changelog/
 changelog:
-  sort: desc
-  filters:
-    exclude:
-      - '^docs:'
-      - '^test:'
-      - '^tests:'
-      - '^Scoop update'
-      - '^ci:'
-      - Merge pull request
-      - Merge branch
+  skip: true
