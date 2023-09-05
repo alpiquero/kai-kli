@@ -1,3 +1,10 @@
+## [v0.1.0-develop.2](https://github.com/alpiquero/nyx-test/tag/v0.1.0-develop.2) (2023-09-05)
+
+### Fixed
+
+* [[7e62f](https://github.com/alpiquero/nyx-test/commit/7e62f3bdb39388beedd60205b5cfd7ab8e4aee95)] fix: remove file
+ (Angel Luis Piquero, 2023-09-05T11:45:04)
+
 ## [v0.1.0-develop.1](https://github.com/alpiquero/nyx-test/tag/v0.1.0-develop.1) (2023-09-05)
 
 ### Fixed
