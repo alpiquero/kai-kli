@@ -44,6 +44,27 @@
 
 ### Fixed
 
+* [[75576](https://github.com/alpiquero/nyx-test/commit/755764307b1227fd74067d515f7716c72af9ac64)] fix: add git push force
+ (Angel Luis Piquero, 2023-09-05T12:44:08)
+
+* [[67931](https://github.com/alpiquero/nyx-test/commit/679316301b13cc8ec0a329353c7019a3415164a8)] fix: nyx
+ (Angel Luis Piquero, 2023-09-05T12:42:40)
+
+* [[4e68c](https://github.com/alpiquero/nyx-test/commit/4e68ce0eb9d965c7d701d4643a5d8dbedca0e90d)] fix: changelog
+ (Angel Luis Piquero, 2023-09-05T12:38:00)
+
+### Added
+
+* [[c966c](https://github.com/alpiquero/nyx-test/commit/c966c83898c95ee41a1d4a8a80992ed5f66029c6)] feat: add file
+ (Angel Luis Piquero, 2023-09-05T12:36:24)
+
+* [[ea1b4](https://github.com/alpiquero/nyx-test/commit/ea1b4efa9c74339e3feda96991e6ca92366ec79e)] feat: pre-release config in nyx
+ (Angel Luis Piquero, 2023-09-05T12:34:10)
+
+## [v0.1.0-develop.3](https://github.com/alpiquero/nyx-test/tag/v0.1.0-develop.3) (2023-09-05)
+
+### Fixed
+
 * [[67931](https://github.com/alpiquero/nyx-test/commit/679316301b13cc8ec0a329353c7019a3415164a8)] fix: nyx
  (Angel Luis Piquero, 2023-09-05T12:42:40)
 
