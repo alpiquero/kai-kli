@@ -48,6 +48,7 @@ releaseTypes:
       gitCommit: "true"
       gitPush: "true"
       gitTag: "true"
+      gitTagForce: "true"
       matchBranches: "^develop$"
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
@@ -72,9 +73,7 @@ releaseTypes:
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-release((\\.([0-9]\\d*))?)?)$"
       gitCommit: "false"
       gitPush: "true"
-      gitPushForce: "true"
       gitTag: "true"
-      gitTagForce: "true"
       matchBranches: "^release(-|/)({{configuration.releasePrefix}})?([0-9|x]\\d*)(\\.([0-9|x]\\d*)(\\.([0-9|x]\\d*))?)?$"
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
