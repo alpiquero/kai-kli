@@ -2,6 +2,27 @@
 
 ### Added
 
+* [[94391](https://github.com/alpiquero/nyx-test/commit/94391a1a8530fb081d73fd668baeae9ccb9392c7)] feat: rm file
+ (Angel Luis Piquero, 2023-09-05T10:50:02)
+
+* [[33701](https://github.com/alpiquero/nyx-test/commit/33701dfc44e017849b31255542613c13cac3f3a8)] feat: add file
+ (Angel Luis Piquero, 2023-09-05T10:46:06)
+
+* [[3f414](https://github.com/alpiquero/nyx-test/commit/3f414ba786e48e16b4e585897f09aff3a3cc0700)] feat: add CHANGELOG.md as release description
+ (Angel Luis Piquero, 2023-09-05T10:42:33)
+
+### Fixed
+
+* [[a0bba](https://github.com/alpiquero/nyx-test/commit/a0bba60731d50c2a9872411e3c8d8ab385eddfe4)] fix: workflow
+ (Angel Luis Piquero, 2023-09-05T10:48:56)
+
+* [[810f1](https://github.com/alpiquero/nyx-test/commit/810f1938ac9e029f790b3397d34f2f02abd915ef)] fix: nyx
+ (Angel Luis Piquero, 2023-09-05T10:39:56)
+
+## [v0.2.0-develop.2](https://github.com/alpiquero/nyx-test/tag/v0.2.0-develop.2) (2023-09-05)
+
+### Added
+
 * [[3f414](https://github.com/alpiquero/nyx-test/commit/3f414ba786e48e16b4e585897f09aff3a3cc0700)] feat: add CHANGELOG.md as release description
  (Angel Luis Piquero, 2023-09-05T10:42:33)
 
