@@ -73,6 +73,7 @@ releaseTypes:
       gitCommit: "false"
       gitPush: "true"
       gitTag: "true"
+      gitTagForce: "true"
       matchBranches: "^release(-|/)({{configuration.releasePrefix}})?([0-9|x]\\d*)(\\.([0-9|x]\\d*)(\\.([0-9|x]\\d*))?)?$"
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
