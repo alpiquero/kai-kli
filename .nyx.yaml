@@ -12,6 +12,14 @@ git:
 releaseLenient: true
 releasePrefix: "v"
 initialVersion: "v2.3.0"
+changelog:
+  path: "CHANGELOG.md"
+  template: "./.ci/CHANGELOG.tpl"
+  sections:
+    "Added": "^feat$"
+    "Fixed": "^fix$"
+    "Changed": "^(chore|perf|style|docs)$"
+  append: head
 releaseTypes: 
   enabled: 
     - mainline
