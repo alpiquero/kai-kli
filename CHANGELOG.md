@@ -1,3 +1,10 @@
+## [v0.2.0-develop.2](https://github.com/alpiquero/nyx-test/tag/v0.2.0-develop.2) (2023-09-05)
+
+### Fixed
+
+* [[810f1](https://github.com/alpiquero/nyx-test/commit/810f1938ac9e029f790b3397d34f2f02abd915ef)] fix: nyx
+ (Angel Luis Piquero, 2023-09-05T10:39:56)
+
 ## [v0.2.0-develop.1](https://github.com/alpiquero/nyx-test/tag/v0.2.0-develop.1) (2023-09-05)
 
 ### Added
