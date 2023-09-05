@@ -65,6 +65,7 @@ releaseTypes:
       publish: "false"
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
     release:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#firstLower}}{{branch}}{{/firstLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-release((\\.([0-9]\\d*))?)?)$"
