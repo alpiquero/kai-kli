@@ -104,6 +104,6 @@ services:
       # - https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
       AUTHENTICATION_TOKEN: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
       REPOSITORY_NAME: "kai-kli"
-      REPOSITORY_OWNER: "konstellation-io"
+      REPOSITORY_OWNER: "alpiquero"
 resume: false
 summary: true
