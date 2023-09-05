@@ -72,6 +72,7 @@ releaseTypes:
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-release((\\.([0-9]\\d*))?)?)$"
       gitCommit: "false"
       gitPush: "true"
+      gitPushForce: "true"
       gitTag: "true"
       gitTagForce: "true"
       matchBranches: "^release(-|/)({{configuration.releasePrefix}})?([0-9|x]\\d*)(\\.([0-9|x]\\d*)(\\.([0-9|x]\\d*))?)?$"
