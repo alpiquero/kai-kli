@@ -31,6 +31,7 @@ releaseTypes:
   items: 
     # "mainline" overrides the release type with the same name from the preset
     mainline:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
       gitCommit: "false"
       gitPush: "true"
@@ -41,6 +42,7 @@ releaseTypes:
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
       publish: "true"
     integration:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-develop(\\.([0-9]\\d*))?)$"
@@ -53,6 +55,7 @@ releaseTypes:
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
       publish: "true"
     hotfix:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-hotfix(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
