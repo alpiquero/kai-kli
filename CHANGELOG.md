@@ -5,6 +5,13 @@
 * [[ea1b4](https://github.com/alpiquero/nyx-test/commit/ea1b4efa9c74339e3feda96991e6ca92366ec79e)] feat: pre-release config in nyx
  (Angel Luis Piquero, 2023-09-05T12:34:10)
 
+## [v0.1.0-develop.3](https://github.com/alpiquero/nyx-test/tag/v0.1.0-develop.3) (2023-09-05)
+
+### Added
+
+* [[ea1b4](https://github.com/alpiquero/nyx-test/commit/ea1b4efa9c74339e3feda96991e6ca92366ec79e)] feat: pre-release config in nyx
+ (Angel Luis Piquero, 2023-09-05T12:34:10)
+
 ## [v0.1.0-develop.2](https://github.com/alpiquero/nyx-test/tag/v0.1.0-develop.2) (2023-09-05)
 
 ### Fixed
