@@ -11,6 +11,7 @@ git:
       password: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
 releaseLenient: true
 releasePrefix: "v"
+initialVersion: "0.0.0"
 changelog:
   path: "CHANGELOG.md"
   template: "./CHANGELOG.tpl"
