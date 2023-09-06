@@ -57,7 +57,6 @@ releaseTypes:
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
       publish: "false"
-      
     hotfix:
       description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
@@ -85,6 +84,7 @@ releaseTypes:
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
       publish: "false"
       versionRangeFromBranchName: true
+      publishPreRelease: "true"
     maintenance:
       description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
