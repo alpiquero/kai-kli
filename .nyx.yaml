@@ -43,7 +43,7 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: "true"
+      publish: true
     integration:
       description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
@@ -56,7 +56,7 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: "false"
+      publish: true
     hotfix:
       description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
@@ -69,7 +69,7 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: "false"
+      publish: true
     release:
       description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
@@ -82,7 +82,7 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: "false"
+      publish: "true"
       versionRangeFromBranchName: true
       publishPreRelease: "true"
     maintenance:
