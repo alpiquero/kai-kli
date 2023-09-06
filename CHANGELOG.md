@@ -1,3 +1,10 @@
+## [v0.4.1](https://github.com/alpiquero/nyx-test/tag/v0.4.1) (2023-09-06)
+
+### Fixed
+
+* [[99ffa](https://github.com/alpiquero/nyx-test/commit/99ffa64dbc761d8438c6467c16d83dd0bb6e9705)] fix: goreleaser
+ (Angel Luis Piquero, 2023-09-06T13:27:17)
+
 ## [v0.4.0](https://github.com/alpiquero/nyx-test/tag/v0.4.0) (2023-09-06)
 
 ### Added
