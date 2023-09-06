@@ -14,6 +14,7 @@ git:
 changelog:
   path: "CHANGELOG.md"
   template: "CHANGELOG.tpl"
+  append: head
   sections:
     "Added": "^feat$"
     "Fixed": "^fix$"
