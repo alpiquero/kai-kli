@@ -34,7 +34,6 @@ releaseTypes:
   items: 
     # "mainline" overrides the release type with the same name from the preset
     mainline:
-      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
       gitCommit: "true"
       gitPush: "true"
@@ -45,7 +44,6 @@ releaseTypes:
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
       publish: true
     integration:
-      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-develop(\\.([0-9]\\d*))?)$"
@@ -56,9 +54,8 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: true
+      publish: false
     hotfix:
-      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-hotfix(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
@@ -69,9 +66,8 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: true
+      publish: false
     release:
-      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#firstLower}}{{branch}}{{/firstLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-release((\\.([0-9]\\d*))?)?)$"
@@ -82,11 +78,9 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: "true"
+      publish: false
       versionRangeFromBranchName: true
-      publishPreRelease: "true"
     maintenance:
-      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
       gitCommit: "true"
       gitPush: "true"
@@ -95,11 +89,10 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: "true"
+      publish: true
       versionRangeFromBranchName: true
     # "internal" overrides the release type with the same name from the preset adding some qualifiers and is the global fallback for all release types
     internal:
-      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "internal"
       gitPush: "false"
