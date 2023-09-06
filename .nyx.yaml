@@ -3,37 +3,39 @@
 # - the Conventional Commits convention
 # - the "mainline" and "internal" release types (that we override here)
 preset: "simple"
+releaseLenient: false
+releasePrefix: "v"
 git:
   remotes:
     origin:
       authenticationMethod: "USER_PASSWORD"
       user: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
       password: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
-releaseLenient: true
-releasePrefix: "v"
-initialVersion: "v0.1.0"
 changelog:
   path: "CHANGELOG.md"
-  template: "./CHANGELOG.tpl"
+  template: "CHANGELOG.tpl"
   sections:
     "Added": "^feat$"
     "Fixed": "^fix$"
     "Changed": "^(chore|perf|style|docs)$"
-  append: head
+  substitutions:
+    "(?m)#([0-9]+)(?s)": "[#%s](https://github.com/alpiquero/kai-kli/issues/%s)"
 releaseTypes: 
   enabled: 
     - mainline
     - integration
     - hotfix
     - release
+    - maintenance
     - internal
   publicationServices: 
     - github
   items: 
     # "mainline" overrides the release type with the same name from the preset
     mainline:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
-      gitCommit: "false"
+      gitCommit: "true"
       gitPush: "true"
       gitTag: "true"
       matchBranches: "^main$"
@@ -42,36 +44,38 @@ releaseTypes:
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
       publish: "true"
     integration:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-develop(\\.([0-9]\\d*))?)$"
       gitCommit: "true"
       gitPush: "true"
       gitTag: "true"
-      gitTagForce: "true"
       matchBranches: "^develop$"
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: "true"
-      publishPrerelease: "true"
+      publish: "false"
+      
     hotfix:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-hotfix(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
-      gitCommit: "false"
+      gitCommit: "true"
       gitPush: "true"
       gitTag: "true"
       matchBranches: "^hotfix((-|\\/)[0-9a-zA-Z-_]+)?$"
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
-      publish: "false"
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
+      publish: "false"
     release:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "{{#firstLower}}{{branch}}{{/firstLower}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-release((\\.([0-9]\\d*))?)?)$"
-      gitCommit: "false"
+      gitCommit: "true"
       gitPush: "true"
       gitTag: "true"
       matchBranches: "^release(-|/)({{configuration.releasePrefix}})?([0-9|x]\\d*)(\\.([0-9|x]\\d*)(\\.([0-9|x]\\d*))?)?$"
@@ -80,8 +84,21 @@ releaseTypes:
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
       publish: "false"
       versionRangeFromBranchName: true
+    maintenance:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
+      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
+      gitCommit: "true"
+      gitPush: "true"
+      gitTag: "true"
+      matchBranches: "^[a-zA-Z]*([0-9|x]\\d*)(\\.([0-9|x]\\d*)(\\.([0-9|x]\\d*))?)?$"
+      matchEnvironmentVariables: 
+        CI: "^true$"                 # only match this release type when running on CI servers
+      matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
+      publish: "true"
+      versionRangeFromBranchName: true
     # "internal" overrides the release type with the same name from the preset adding some qualifiers and is the global fallback for all release types
     internal:
+      description: "{{#fileContent}}CHANGELOG.md{{/fileContent}}"
       collapseVersions: true
       collapsedVersionQualifier: "internal"
       gitPush: "false"
@@ -108,5 +125,5 @@ services:
       AUTHENTICATION_TOKEN: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
       REPOSITORY_NAME: "kai-kli"
       REPOSITORY_OWNER: "alpiquero"
-resume: false
+resume: true
 summary: true
