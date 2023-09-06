@@ -1,3 +1,10 @@
+## [v0.4.0-develop.2](https://github.com/alpiquero/nyx-test/tag/v0.4.0-develop.2) (2023-09-06)
+
+### Added
+
+* [[b062f](https://github.com/alpiquero/nyx-test/commit/b062f7d9ec16917dd55bd7bfc47a4c334b97b487)] feat: publish only on maitenance and mainline
+ (Angel Luis Piquero, 2023-09-06T13:18:17)
+
 ## [v0.4.0-develop.1](https://github.com/alpiquero/nyx-test/tag/v0.4.0-develop.1) (2023-09-06)
 
 ### Added
