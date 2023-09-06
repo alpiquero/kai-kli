@@ -1,4 +1,4 @@
-## [v0.2.0-develop.1](https://github.com/alpiquero/nyx-test/tag/v0.2.0-develop.1) (2023-09-06)
+## [v0.2.0](https://github.com/alpiquero/nyx-test/tag/v0.2.0) (2023-09-06)
 
 ### Added
 
