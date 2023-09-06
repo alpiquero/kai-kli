@@ -1,3 +1,13 @@
+## [v0.4.0-develop.1](https://github.com/alpiquero/nyx-test/tag/v0.4.0-develop.1) (2023-09-06)
+
+### Added
+
+* [[bfd77](https://github.com/alpiquero/nyx-test/commit/bfd7768fcd9b8cca5bbe1a2e2b22356fca77d705)] feat: add prerelease to nyx 2
+ (Angel Luis Piquero, 2023-09-06T13:05:43)
+
+* [[b7bf9](https://github.com/alpiquero/nyx-test/commit/b7bf96dea5c267c5ed6e8f9986d1991cb8189f06)] feat: add prerelease to nyx
+ (Angel Luis Piquero, 2023-09-06T13:00:54)
+
 ## [v0.3.0](https://github.com/alpiquero/nyx-test/tag/v0.3.0) (2023-09-06)
 
 ### Fixed
