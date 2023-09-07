@@ -8,6 +8,7 @@ release:
   github:
     owner: alpiquero
     name: kai-kli
+  mode: append
 
 # https://goreleaser.com/customization/hooks/
 before:
