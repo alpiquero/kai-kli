@@ -38,7 +38,7 @@ releaseTypes:
       matchEnvironmentVariables: 
         CI: "^true$"                 # only match this release type when running on CI servers
       matchWorkspaceStatus: "CLEAN"  # only match this release type when the repository is clean
-      publish: false
+      publish: true
     # "internal" overrides the release type with the same name from the preset adding some qualifiers and is the global fallback for all release types
     internal:
       collapseVersions: true
